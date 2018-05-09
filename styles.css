@@ -1,13 +1,4 @@
-#drummy
-{
-    position: relative;
-    margin:0;
-    width: 200px;
-    height: 200px;
-    display: right;
-}
-
-h1, h2
+h1
 {
     font-family: 'Indie Flower', cursive;
 }
@@ -20,7 +11,7 @@ header
 }
 body
 {
-    background-color: aqua;
+    background-color: #00ffff;
 }
 
 #learn, #play
@@ -29,10 +20,6 @@ body
     border-radius: 30px;
     width: 80%;
     text-align: center;
-}
-#learn, #play
-{
-    text-align:center;
     padding: 10%;
     margin-bottom: 50px;
     font-family: 'Indie Flower', cursive;
@@ -50,23 +37,53 @@ a
 {
     width: 90%;
     position: relative;
+    margin-top:
 }
 
 .wrapper 
 {
-  display: inline;
+    display:grid;
+    grid-template-columns: 30% 30% 30%;
     margin: 10%;
-    width: 90%;
+    margin-left: auto;
+    width: 100%;
 }
 
 .note
 {
-  border-radius: 5px;
-  font-family: 'Roboto', cursive; 
-  font-size: 150%;
-    display: inline-flex;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 3em;
     background-color: #ff00ff;
     padding: 30px;
+    margin: 2%; 
+    text-align: center;
+}
+
+/*tablet Screen*/
+@media (min-width: 650px)
+{
+    .wrapper 
+    {
+        grid-template-columns: 40% 40%;
+        justify-content: space-between;
+    }
+
+}
+@media (min-width: 800px)
+{
+    #wrap
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
     justify-content: space-between;
-    
+}
+    .wrapper
+    {
+        display:inline-flex; 
+    }
+    .note
+    {
+        justify-content: space-between;
+    }
 }
